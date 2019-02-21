@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="890eefb2-0b1a-4bbd-9476-308deeac46b8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="idReimbursement" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="idReimbursement"/>
+		<fieldDescription><![CDATA[idReimbursement]]></fieldDescription>
+	</field>
+	<field name="paymentDateForm" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentDateForm"/>
+		<fieldDescription><![CDATA[paymentDateForm]]></fieldDescription>
+	</field>
+	<field name="paymentDateForm2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentDateForm"/>
+		<fieldDescription><![CDATA[paymentDateForm]]></fieldDescription>
+	</field>
+	<field name="recipient" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentDateForm"/>
+		<fieldDescription><![CDATA[paymentDateForm]]></fieldDescription>
+	</field>
+	<field name="language" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="entityType"/>
+		<fieldDescription><![CDATA[entityType]]></fieldDescription>
+	</field>
+	<field name="createdBy" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="entityType"/>
+		<fieldDescription><![CDATA[entityType]]></fieldDescription>
+	</field>
+	<field name="createdDate" class="java.lang.Long">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountPaid"/>
+		<fieldDescription><![CDATA[amountPaid]]></fieldDescription>
+	</field>
+	<field name="modifiedBy" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountPaid"/>
+		<fieldDescription><![CDATA[amountPaid]]></fieldDescription>
+	</field>
+	<field name="modifiedDate" class="java.lang.Long">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentMethod"/>
+		<fieldDescription><![CDATA[paymentMethod]]></fieldDescription>
+	</field>
+	<field name="filenetId" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentMethod"/>
+		<fieldDescription><![CDATA[paymentMethod]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentMethod"/>
+		<fieldDescription><![CDATA[paymentMethod]]></fieldDescription>
+	</field>
+	<field name="statusDate" class="java.lang.Long">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentMethod"/>
+		<fieldDescription><![CDATA[paymentMethod]]></fieldDescription>
+	</field>
+	<field name="sendable" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="paymentMethod"/>
+		<fieldDescription><![CDATA[paymentMethod]]></fieldDescription>
+	</field>
+	<field name="sentBy" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="remarks" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="attachments" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="faxNumber" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="storeIntoFilenet" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="storeIntoFilenetDisabled" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="filenetFolder" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="correspondenceTable" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="amountToReimbursed"/>
+		<fieldDescription><![CDATA[amountToReimbursed]]></fieldDescription>
+	</field>
+	<field name="requester.postCode" class="java.lang.String">
+		<fieldDescription><![CDATA[requester.postCode]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="82" y="0" width="100" height="30" uuid="07fb201f-f051-41db-bbbe-c3f0d7787181">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="826f5ef7-41ef-402a-b9ce-aa0b533a0f3a"/>
+				</reportElement>
+				<text><![CDATA[idReimbursement]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="14" width="100" height="30" uuid="1e96eecb-c32b-476c-8554-8112fdcc3372"/>
+				<textFieldExpression><![CDATA[$F{paymentDateForm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="0" width="100" height="30" uuid="c4753aaa-e034-4519-9058-25bbde406b3a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d908d13-989d-4c6b-811f-4b6f8e87c2cb"/>
+				</reportElement>
+				<text><![CDATA[modifiedBy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="0" width="100" height="30" uuid="b320143a-6839-4c14-82b2-432512520c47">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d5c5be80-09a4-4f20-bbfd-8a5b25682ea7"/>
+				</reportElement>
+				<text><![CDATA[requester.postCode]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="82" y="31" width="100" height="30" uuid="f0d9115c-2d95-4d32-9607-e94e90ff5c9c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="826f5ef7-41ef-402a-b9ce-aa0b533a0f3a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idReimbursement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="25" width="100" height="30" uuid="a276b951-25de-447b-8254-ec0db944ef89">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d908d13-989d-4c6b-811f-4b6f8e87c2cb"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{modifiedBy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="68" width="100" height="30" uuid="7ef4effa-fb65-4d57-ad6f-dd0ec3be2f0f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d5c5be80-09a4-4f20-bbfd-8a5b25682ea7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{requester.postCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
