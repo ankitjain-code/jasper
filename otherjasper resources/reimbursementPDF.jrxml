@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reimbursementPDF" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="66888d3a-5aab-45b5-a744-38d396780885">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="520"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="466"/>
+	<property name="ireport.zoom" value="2.5937424601001022"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="2379"/>
+	<template><![CDATA[Thread.currentThread().getContextClassLoader().getResourceAsStream("oami-reports/commons/Generic.jrtx")]]></template>
+	<subDataset name="dataset1" uuid="2b856199-5520-4a13-8040-a8aef7c36cb1"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[("jasperreports/IncomingLetter/"); 		java.net.URL path = getClass().getClassLoader().getResource(((String)value)); 		value = path.getPath().substring(0,path.getPath().lastIndexOf('/') + 1); 		Integer.valueOf(0)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bankDetails" class="java.lang.Boolean"/>
+	<parameter name="feeDetails" class="java.lang.Boolean"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="commonData.idPayment" class="java.lang.String">
+		<fieldDescription><![CDATA[userData.mailboxOwnerId]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.idPayment" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.idPayment]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.idReimbursement" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.idReimbursement]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.accountHolder" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.accountHolder]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.bankName" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.bankName]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.bankAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.bankAddress]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.ibanCode" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.ibanCode]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.bicSwiftCode" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.bicSwiftCode]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.holderDeclaration" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.holderDeclaration]]></fieldDescription>
+	</field>
+	<field name="commonData.reimbursementInfo.feeDetails" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.reimbursementInfo.feeDetails]]></fieldDescription>
+	</field>
+	<field name="commonData.signature" class="java.lang.String">
+		<fieldDescription><![CDATA[commonData.signature]]></fieldDescription>
+	</field>
+	
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<textField isStretchWithOverflow="true" evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement key="" x="473" y="25" width="74" height="13" uuid="f27620b9-9814-4a4c-8fa7-f0d254805f91"/>
+				<textFieldExpression><![CDATA[$R{current-account-portlet.reimbursement.date}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d/M/yyyy">
+				<reportElement x="471" y="38" width="100" height="14" uuid="22f46c6d-519a-477b-bbc1-405198c0514f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="158" height="53" uuid="8bd46145-6f85-4172-9afc-c258faa103e1"/>
+				<imageExpression><![CDATA[Thread.currentThread().getContextClassLoader().getResourceAsStream("jasperreports/IncomingLetter/images/logo-right.png")]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="52" width="555" height="1" uuid="7d690b58-a1cb-418f-ab82-2437e48f79d8"/>
+				<graphicElement>
+					<pen lineWidth="0.1"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	
+	<detail>
+		<band height="158" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement style="title" x="71" y="13" width="402" height="28" uuid="5b782598-596e-42f2-b3a5-8b63cf029e34"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Communication To Reimbursement Letter"]]></textFieldExpression>
+			</textField>
+			
+			<rectangle>
+				<reportElement x="5" y="47" width="544" height="105" uuid="4e3fd9bb-2d3f-4116-be42-484a719af922"/>
+				<graphicElement>
+					<pen lineWidth="0.8"/>
+				</graphicElement>
+			</rectangle>
+			
+			
+			<rectangle>
+				<reportElement x="5" y="47" width="113" height="17" uuid="7ca7a2cb-39ca-4adf-b383-c66c731f1bc5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="47" width="110" height="17" uuid="633dafba-39af-45ab-bd62-29f35213180c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["User Information"]]></textFieldExpression>
+			</textField>
+			
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="9" y="71" width="130" height="26" uuid="13802a40-439c-44a2-850e-2cda74e7853c"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["User Id"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="96" width="390" height="1" uuid="1945aa66-1902-45cb-a58b-569a2fd0f3ef"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="9" y="97" width="130" height="13" uuid="cf3cc008-52c1-4681-bc90-061df73dea4f"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Payment Id"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="109" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="9" y="110" width="130" height="13" uuid="51423459-be52-4f5f-a665-d06a3680e24e"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Reimbursement Id"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="122" width="390" height="1" uuid="15ae3f75-c31f-4102-8c78-04072eda2af8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="9" y="123" width="130" height="13" uuid="359a4e8d-ca9f-4274-8243-bd2460aaf518"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["From"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="135" width="390" height="1" uuid="15ae3f75-c31f-4102-8c78-04072eda2af8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="9" y="136" width="130" height="13" uuid="22b43d31-d598-4d6e-9538-9149cb451d9a"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["To"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="150" width="390" height="1" uuid="15ae3f75-c31f-4102-8c78-04072eda2af8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="149" y="97" width="380" height="13" uuid="b600de14-f395-45aa-b50d-cb8ffbb477e5"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.idPayment}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="149" y="111" width="380" height="13" uuid="50acac79-40ab-4c1d-a067-4082789a69f2"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.idReimbursement}]]></textFieldExpression>
+			</textField>
+		</band>
+			
+		
+		
+		
+		<band height="135" splitType="Stretch">
+			 
+			<rectangle>
+				<reportElement x="5" y="47" width="113" height="17" uuid="7ca7a2cb-39ca-4adf-b383-c66c731f1bc5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="5" y="2" width="544" height="130" uuid="4e3fd9bb-2d3f-4116-be42-484a719af922"/>
+				<graphicElement>
+					<pen lineWidth="0.8"/>
+				</graphicElement>
+			</rectangle>
+			
+
+			
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="0" width="110" height="17" uuid="41374895-51c8-410a-b4d0-dc148304dfc2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Bank account details"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="14" width="130" height="14" uuid="126c8b93-2049-48ab-812b-4b1e6a0945df"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Account Holder :"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="14" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="28" width="130" height="14" uuid="eebd69fb-314f-4857-ab48-1b21b48e17cf"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Bank Name :"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="28" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="42" width="130" height="14" uuid="f97d00c6-887e-4620-8b98-f1de353632ea"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Bank Address :"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="42" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="56" width="130" height="14" uuid="cbcaba7a-c621-4a56-9dd0-e19037fbfde8"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["IBAN CODE"+":"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="56" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="70" width="130" height="14" uuid="0ade3d78-e1e1-4905-a902-a70c66bae617"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["BIC CODE :"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="70" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="84" width="130" height="24" uuid="8d7dca87-3aec-4810-aeb4-ec4c5c12d78c"/>
+				<textElement verticalAlignment="Bottom">
+					<paragraph lineSpacing="Fixed" lineSpacingSize="8.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["I declare that I am the holder of the above bank account :"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="148" y="84" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="14" width="384" height="14" uuid="4f436dc3-d321-4e4a-9bf2-efcb66bee2b1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.accountHolder}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="28" width="384" height="14" uuid="4f436dc3-d321-4e4a-9bf2-efcb66bee2b1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.bankName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="42" width="384" height="14" uuid="846fb35c-b3d0-48b5-9e20-0402141e062e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.bankAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="56" width="384" height="14" uuid="380b8e3d-da7e-4c2a-9c2b-9d5140e51112"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.ibanCode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="70" width="384" height="14" uuid="91abd0ee-ea57-4e8d-9a7d-b276cde95ad8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.bicSwiftCode}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="161" y="90" width="15" height="15" uuid="aea05ada-06a6-4357-bff3-b0d53080c8a0"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="161" y="90" width="15" height="15" uuid="8e19acf7-2eee-4a6f-8dd1-9db1b79e7308">
+					<printWhenExpression><![CDATA[$F{commonData.reimbursementInfo.holderDeclaration} != Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<line>
+				<reportElement x="148" y="110" width="390" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			</band>		
+			
+			<band height="60" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{feeDetails}]]></printWhenExpression>
+			<rectangle>
+				<reportElement x="5" y="0" width="544" height="55" uuid="4e3fd9bb-2d3f-4116-be42-484a719af922"/>
+				<graphicElement>
+					<pen lineWidth="0.8"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="5" y="0" width="113" height="17" uuid="7ca7a2cb-39ca-4adf-b383-c66c731f1bc5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="0" width="110" height="17" uuid="633dafba-39af-45ab-bd62-29f35213180c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fee Details"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="17" y="20" width="521" height="13" uuid="a4342bd9-d8c8-49de-867e-6c8522a4e543"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="19" y="20" width="110" height="17" uuid="5a39add7-fe0e-4e2c-ab03-b9b877495455"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fee Details :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="156" y="20" width="110" height="17" uuid="5a39add7-fe0e-4e2c-ab03-b9b877495455"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{commonData.reimbursementInfo.feeDetails}]]></textFieldExpression>
+			</textField>
+			
+			</band>
+		
+		
+		
+		<band height="120" splitType="Stretch">
+			<rectangle>
+				<reportElement x="5" y="0" width="544" height="70" uuid="4e3fd9bb-2d3f-4116-be42-484a719af922"/>
+				<graphicElement>
+					<pen lineWidth="0.8"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="5" y="0" width="113" height="17" uuid="7ca7a2cb-39ca-4adf-b383-c66c731f1bc5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="8" y="0" width="110" height="17" uuid="633dafba-39af-45ab-bd62-29f35213180c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Signature"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="17" y="20" width="521" height="13" uuid="a4342bd9-d8c8-49de-867e-6c8522a4e543"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="19" y="20" width="110" height="17" uuid="5a39add7-fe0e-4e2c-ab03-b9b877495455"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Signature :"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="156" y="20" width="110" height="17" uuid="5a39add7-fe0e-4e2c-ab03-b9b877495455"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{commonData.signature}]]></textFieldExpression>
+			</textField>
+			
+			
+			<rectangle>
+				<reportElement x="17" y="33" width="521" height="13" uuid="a4342bd9-d8c8-49de-867e-6c8522a4e543"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="19" y="33" width="110" height="17" uuid="5a39add7-fe0e-4e2c-ab03-b9b877495455"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date :"]]></textFieldExpression>
+			</textField>
+			
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="156" y="33" width="110" height="17" uuid="5a39add7-fe0e-4e2c-ab03-b9b877495455"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			
+			<rectangle>
+				<reportElement x="17" y="46" width="521" height="13" uuid="a4342bd9-d8c8-49de-867e-6c8522a4e543"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="19" y="46" width="110" height="17" uuid="5a39add7-fe0e-4e2c-ab03-b9b877495455"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["User ID :"]]></textFieldExpression>
+			</textField>
+			
+			<line>
+				<reportElement x="5" y="75" width="544" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+
+			<textField isBlankWhenNull="false">
+				<reportElement style="header" x="7" y="75" width="281" height="15" uuid="7a99c1f1-ab8f-420d-91f8-cf1d61348fba"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
+					<font pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Annexes :"]]></textFieldExpression>
+			</textField>
+			
+			<line>
+				<reportElement x="5" y="115" width="544" height="1" uuid="4af06bdb-d21e-470d-aabc-c17abd5d183e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>	
+	</detail>
+	
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement style="footer" x="139" y="4" width="278" height="28" uuid="1087fac8-e6c6-49e8-9ffc-cbdcc3996283"/>
+				<textElement textAlignment="Center" markup="none">
+					<font pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Avenida de Europa, 4 E-03008 Alicante, Spain
+Tel.: +34 96 513 9100 Fax: +34 96 513 1344
+www.euipo.europa.eu]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="default" x="431" y="20" width="101" height="12" uuid="cddc4c3a-f8da-4aa2-a50f-527de3c697e3"/>
+				<box rightPadding="1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page" + " " + $V{PAGE_NUMBER} + " " + "of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="20" width="21" height="12" uuid="cddc4c3a-f8da-4aa2-a50f-527de3c697e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
